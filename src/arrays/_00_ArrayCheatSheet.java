@@ -28,33 +28,35 @@ public class _00_ArrayCheatSheet {
 		
 		int[] nums = new int[50];
 		//7. use a for loop to make every value of the integer array a random number
-		for(int i = 0; i < nums.length; i = i++) {
+		for(int i = 0; i < nums.length; i++) {
 			Random randy = new Random();
-			int nums1 = randy.nextInt(50);		
+			nums[i] = randy.nextInt(50);		
 		}
 		//8. without printing the entire array, print only the smallest number in the array
+		int smallest = nums[0];
+		for (int i=0; i < nums.length; i++) {
+			if (nums[i]< smallest){
+				smallest = nums[i];
+		     
+			} 
+		}
 		
-		int small = 1;
-		for(int i = 0; i <nums.length; i++){
-			if(small > nums[i]) {
-				small = nums[i];
-				System.out.println(small);
-			
-				
-			}
-	}
+		System.out.println("The Smallest Number Is: "+smallest);
+		
+	
 		
 		//9 print the entire array to see if step 8 was correct
-		//for (int i=0;i<nums.length;i++) {
-		 //    System.out.println(nums[i]);
-		//}
+	for (int i=0;i<nums.length;i++) {
+		     System.out.println(nums[i]);
+		}
 		//10. print the largest number in the array.
-		//int big = 49;
-		//for(int i = 0; i <nums.length; i++){
-		//	if(big < nums[i]) {
-		//		System.out.println(nums[i]);
-	//}
-		
-		//}	
+		int largest = 0;
+	for (int i=0; i < nums.length - 1; i++) {
+		if (nums[i] > largest ){
+			largest = nums[i];
+	     
+		}
+	}
+	System.out.println("The Largest Number Is: " + largest);
 }
 	}
